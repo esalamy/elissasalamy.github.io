@@ -71,16 +71,19 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
         <div class="col-md-4">
           <h2>Heading</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
+        
         <div class="col-md-4">
           <h2>Heading</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
+       
         <div class="col-md-4">
           <h2>Heading</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
@@ -104,5 +107,52 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<script>
+  $(function () {
+    $('#container').highcharts({
+    colors: ['#551A8B', '#FF69B4'],
+        title: {
+            text: "Hilary Clinton's Favorability Ratings",
+            x: -50 //center
+        },
+        subtitle: {
+            text: 'Source: CNN',
+            x: -20
+        },
+        xAxis: {
+            categories:["3/20/16","2/27/16","1/24/16","12/21/15","10/17/15","8/16/15","7/25/15","5/31/15","3/15/15","11/23/14","6/1/14","11/18/12","1/16/11","10/30/10","4/11/10","1/24/10","10/18/09","8/3/09","4/26/09"]
+        },
+        yAxis: {
+            title: {
+                text: 'Percentage'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#00FF00'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '%'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Favorable',
+            data:[43,42,45,47,46,43,45,46,53,59,55,67,66,62,61,63,65,61,64]}, 
+            {
+            name: 'Unfavorable',
+            data: [56,55,52,51,50,55,48,50,44,38,42,28,31,34,35,35,32,35,34]
+        },]
+    });
+});
+</script>
   </body>
 </html>
