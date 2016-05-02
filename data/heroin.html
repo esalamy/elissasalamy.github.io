@@ -98,57 +98,7 @@
 
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
-$(function () {
-    $('#container').highcharts({
-        title: {
-            text: 'Opioid Death Rates 2004-2014',
-            x: -20 //center
-        },
-        subtitle: {
-            text: 'Source: NYS Data',
-            x: -20
-        },
-        xAxis: {
-            categories: ['2004', '2005', '2006', '2007', '2008', '2009',
-                '2010', '2011', '2012', '2013', '2014']
-        },
-        yAxis: {
-            title: {
-                text: 'Number of Deaths'
-            },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
-            }]
-        },
-        tooltip: {
-            valueSuffix: '°C'
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
-        },
-        series: [{
-            name: 'Kings County',
-            data: [73.0, 81.0, 103.0, 108.0, 104.0, 108.0, 120.2, 112.0, 125.0, 112.0, 154.0]
-        }, {
-            name: 'Suffolk County',
-            data: [44.0, 105.0, 106.0, 134.0, 133.0, 128.0, 135.0, 212.0, 196.0, 157.0, 129.0]
-        }, {
-            name: 'Queens County',
-            data: [38.0, 55.0, 59.0, 67.0, 72.0, 65.0, 80.0, 82.0, 86.0, 112.0, 100.0]
-        }, {
-          name: 'Nassau County',
-            data: [16.0, 37.0, 58.0, 74.0, 65.0, 65.0, 58.0, 97.0, 100.0, 81.0, 99]
-        }, {
-            name: 'New York County',
-            data: [57.0, 65.0, 81.0, 63.0, 69.0, 63.0, 46.0, 62.0, 103.0, 92.0, 95]
-        }]
-    });
-});
+<script async src="//jsfiddle.net/4qucahnb/embed/"></script>
  
   </body>
 </html>
